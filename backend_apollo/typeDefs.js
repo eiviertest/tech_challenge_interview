@@ -13,12 +13,12 @@ const typeDefs = gql`
 
     input UserInput {
         name: String!
-        second_name: String!
+        second_name: String
         first_name: String!
-        last_name: String!
+        last_name: String
         date_birthday: String!
         email: String!
-        phone: String!
+        phone: String
     } 
 
     type Query {

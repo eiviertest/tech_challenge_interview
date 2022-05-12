@@ -4,7 +4,21 @@
       <h5 class="card-title">¿Cuál es tu fecha de nacimiento?</h5>
       <p class="card-text">
         <input v-model="user.day_birthday" type="number" min="1" max="31" class="form-control" placeholder="Día" @change="sendNacimiento()">
-        <input v-model="user.month_birthday" type="text" class="form-control" placeholder="Mes" @change="sendNacimiento()">
+        <input list="browsers" v-model="user.month_birthday" type="text" class="form-control" placeholder="Mes" @change="sendNacimiento()">
+        <datalist id="browsers">
+          <option value="Enero" />
+          <option value="Febrero" />
+          <option value="Marzo" />
+          <option value="Abril" />
+          <option value="Mayo" />
+          <option value="Junio" />
+          <option value="Julio" />
+          <option value="Agosto" />
+          <option value="Septiembre" />
+          <option value="Octubre" />
+          <option value="Noviembre" />
+          <option value="Diciembre" />
+        </datalist>
         <input v-model="user.year_birthday" type="number" max="2022" min="1900" class="form-control" placeholder="Año" @change="sendNacimiento()">
       </p>
       <div class="alert alert-danger" role="alert">
